@@ -14,7 +14,9 @@ maxAge: ninetyDaysInSeconds, force: true
 }))
 app.use(helmet.dnsPrefetchControl)
 app.use(helmet.noCache)
-(helmet.contentSecurityPolicy({ directives: { defaultSrc: ["'self'"], scriptSrc: ["'self'", "trusted-cdn.com"] }} ))
+app.use(helmet.contentSecurityPolicy({ directives: { defaultSrc: ["'self'"], scriptSrc: ["'self'", "trusted-cdn.com"] }} 
+
+))
 
 // your code
 
